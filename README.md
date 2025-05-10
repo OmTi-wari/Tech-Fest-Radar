@@ -1,4 +1,5 @@
  Event Monitoring and Tech fest , HAckathon Organising Platform
+This is a bounty project of $50...we are open for more such bounty and grant projects 
 
 ![image](https://github.com/user-attachments/assets/2137e281-c4d4-45af-ac75-45b20d74ac84)
 
