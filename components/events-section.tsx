@@ -47,7 +47,7 @@ export function EventsSection() {
   }
 
   return (
-    <section className="py-16 container px-4 md:px-6">
+    <section id="upcoming-events" className="py-16 container px-4 md:px-6">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
         <div>
           <h2 className="text-3xl font-bold tracking-tight">Upcoming Events</h2>
