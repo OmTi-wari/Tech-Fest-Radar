@@ -12,7 +12,7 @@ Thank you for your interest in contributing to Tech-Fest-Radar! We welcome contr
    ```
 3. Install dependencies:
    ```bash
-  npm install
+   npm install
    ```
 4. Create a new branch for your feature:
    ```bash
