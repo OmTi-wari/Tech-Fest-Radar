@@ -46,7 +46,6 @@ export function Navbar() {
 
           <div className="flex items-center space-x-4">
             <ModeToggle />
-            <Button className="hidden md:flex">Sign In</Button>
             <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
@@ -69,7 +68,7 @@ export function Navbar() {
                 {route.label}
               </Link>
             ))}
-            <Button className="w-full">Sign In</Button>
+            {/* Sign In button removed */}
           </nav>
         </div>
       )}
