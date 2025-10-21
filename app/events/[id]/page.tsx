@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { useState } from "react"
+import { useState, use } from "react"
 import Image from "next/image"
 import { notFound } from "next/navigation"
 import { Button } from "@/components/ui/button"
@@ -14,8 +14,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Calendar, Clock, IndianRupee, MapPin, Users, Award, CheckCircle } from "lucide-react"
 import { eventsData } from "@/data/events"
 
-export default function EventPage({ params }: { params: { id: string } }) {
-  const event = eventsData.find((e) => e.id === params.id)
+export default function EventPage({ params }: { params: Promise<{ id: string }> }) {
+  const resolvedParams = use(params)
+  const event = eventsData.find((e) => e.id === resolvedParams.id)
 
   if (!event) {
     notFound()
@@ -67,7 +68,7 @@ export default function EventPage({ params }: { params: { id: string } }) {
   }
 
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="min-h-screen bg-background text-foreground">
       <div className="relative h-[300px] md:h-[400px]">
         <Image src={event.image || "/placeholder.svg"} alt={event.title} fill className="object-cover brightness-50" />
         <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
