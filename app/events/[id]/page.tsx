@@ -91,8 +91,9 @@ export default function EventPage({ params }: { params: Promise<{ id: string }> 
         </div>
       </div>
 
-      <section className="py-12">
-        <div className="container px-4 md:px-6">
+      <section className="py-12 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-600/40 via-purple-400/20 to-background"></div>
+        <div className="container px-4 md:px-6 relative z-10">
           <div className="grid gap-8 lg:grid-cols-3">
             <div className="lg:col-span-2">
               <Tabs defaultValue="details">
